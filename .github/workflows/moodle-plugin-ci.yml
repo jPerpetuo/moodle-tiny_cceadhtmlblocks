@@ -110,7 +110,7 @@ jobs:
         if: ${{ always() }}
         run: |
           set -euo pipefail
-          builddir="$(sudo find / -type d -path '*/cceadhtmlblocks/amd/build' -print -quit)"
+          builddir="$(find -L "$GITHUB_WORKSPACE" "$RUNNER_TEMP" "$HOME" -type d -path '*/cceadhtmlblocks/amd/build' -print -quit)"
           test -n "$builddir"
           mkdir -p generated-amd
           cp -R "$builddir" generated-amd/build
