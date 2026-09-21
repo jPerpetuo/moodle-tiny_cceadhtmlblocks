@@ -106,12 +106,21 @@ jobs:
         if: ${{ !cancelled() }}
         run: moodle-plugin-ci grunt --max-lint-warnings 0
 
+      - name: Collect generated AMD build
+        if: ${{ always() }}
+        run: |
+          set -euo pipefail
+          builddir="$(find "$GITHUB_WORKSPACE" "$RUNNER_TEMP" "$HOME" -type d -path '*/lib/editor/tiny/plugins/cceadhtmlblocks/amd/build' -print -quit)"
+          test -n "$builddir"
+          mkdir -p generated-amd
+          cp -R "$builddir" generated-amd/build
+
       - name: Upload generated AMD build
         if: ${{ always() }}
         uses: actions/upload-artifact@v7
         with:
           name: AMD build (${{ join(matrix.*, ', ') }})
-          path: '**/amd/build'
+          path: generated-amd/build
           retention-days: 7
           if-no-files-found: error
       - name: PHPUnit tests
