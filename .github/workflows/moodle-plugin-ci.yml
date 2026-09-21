@@ -32,7 +32,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-      include:
+        include:
         - php: '8.2'
           moodle-branch: 'MOODLE_501_STABLE'
           database: pgsql
