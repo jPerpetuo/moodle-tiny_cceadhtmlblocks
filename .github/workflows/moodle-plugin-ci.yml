@@ -106,6 +106,14 @@ jobs:
         if: ${{ !cancelled() }}
         run: moodle-plugin-ci grunt --max-lint-warnings 0
 
+      - name: Upload generated AMD build
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: AMD build (${{ join(matrix.*, ', ') }})
+          path: plugin/amd/build
+          retention-days: 7
+          if-no-files-found: error
       - name: PHPUnit tests
         if: ${{ !cancelled() }}
         run: moodle-plugin-ci phpunit --fail-on-warning
