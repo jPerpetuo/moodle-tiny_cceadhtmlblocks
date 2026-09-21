@@ -1,0 +1,51 @@
+.ccead-htmlblock {
+    border: 1px solid #2b6cb0;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.ccead-htmlblock--tip {
+    background-color: #eaf7ee;
+    border-color: #2f855a;
+}
+
+.ccead-htmlblock--information {
+    background-color: #eaf3ff;
+    border-color: #2b6cb0;
+}
+
+.ccead-htmlblock--attention {
+    background-color: #fff8db;
+    border-color: #b7791f;
+}
+
+.ccead-htmlblock--important {
+    background-color: #fff0f0;
+    border-color: #c53030;
+}
+
+.tiny-cceadhtmlblocks-picker__options {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.tiny-cceadhtmlblocks-picker__option {
+    cursor: pointer;
+    text-align: left;
+}
+
+.tiny-cceadhtmlblocks-picker__option[aria-checked="true"] {
+    outline: 3px solid #0f6cbf;
+    outline-offset: 2px;
+}
+
+.tiny-cceadhtmlblocks-picker__label,
+.tiny-cceadhtmlblocks-picker__preview {
+    display: block;
+}
+
+.tiny-cceadhtmlblocks-picker__label {
+    font-weight: 700;
+}
