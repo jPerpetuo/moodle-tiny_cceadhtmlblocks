@@ -17,7 +17,10 @@ import {models} from './models';
 const getCurrentModel = (target) => target.wrapper?.dataset.cceadhtmlblock || 'tip';
 
 const getStrings = async() => {
-    const keys = ['pluginname', 'dialogueintro', 'apply', 'remove', 'cancel', ...Object.values(models).map((model) => model.labelKey)];
+    const keys = [
+    'pluginname', 'dialogueintro', 'apply', 'remove', 'cancel',
+    ...Object.values(models).map((model) => model.labelKey),
+];
     const values = await Promise.all(keys.map((key) => getString(key, key === 'cancel' ? 'core' : component)));
     return Object.fromEntries(keys.map((key, index) => [key, values[index]]));
 };
