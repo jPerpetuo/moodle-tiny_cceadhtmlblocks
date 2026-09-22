@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['apply'] = 'Aplicar bloco de destaque';
 $string['activity'] = 'Atividade';
+$string['apply'] = 'Aplicar bloco de destaque';
 $string['attention'] = 'Atenção';
 $string['button_htmlblocks'] = 'Blocos de destaque';
 $string['cceadhtmlblocks:use'] = 'Usar o plugin de blocos de destaque CCEAD';
