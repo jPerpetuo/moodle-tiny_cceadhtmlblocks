@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'tiny_cceadhtmlblocks';
-$plugin->version = 2026092100;
+$plugin->version = 2026092200;
 $plugin->requires = 2025092600;
 $plugin->supported = [501, 502];
-$plugin->release = '1.0.0';
+$plugin->release = '1.1.0';
 $plugin->maturity = MATURITY_ALPHA;

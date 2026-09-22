@@ -15,3 +15,5 @@ export const menuItemName = `${component}_menuitem`;
 export const icon = component;
 export const blockClass = 'ccead-htmlblock';
 export const blockDataAttribute = 'data-ccead-htmlblock';
+export const blockFormatDataAttribute = 'data-ccead-htmlblock-format';
+export const blockColorDataAttribute = 'data-ccead-htmlblock-color';
