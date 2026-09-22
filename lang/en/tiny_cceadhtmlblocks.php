@@ -26,8 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['apply'] = 'Apply highlight block';
-$string['attention'] = 'Attention';
 $string['activity'] = 'Activity';
+$string['attention'] = 'Attention';
 $string['button_htmlblocks'] = 'Highlight blocks';
 $string['cceadhtmlblocks:use'] = 'Use the CCEAD highlight blocks plugin';
 $string['choosecolor'] = 'Choose the colour';

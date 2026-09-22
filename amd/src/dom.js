@@ -156,9 +156,15 @@ export const getBlockConfiguration = (element) => {
     const format = element.getAttribute(blockFormatDataAttribute);
     const color = element.getAttribute(blockColorDataAttribute);
     const legacyColor = element.getAttribute(blockDataAttribute);
+    let selectedColor = 'tip';
+    if (isColor(color)) {
+        selectedColor = color;
+    } else if (isColor(legacyColor)) {
+        selectedColor = legacyColor;
+    }
     return {
         format: isFormat(format) ? format : 'box',
-        color: isColor(color) ? color : (isColor(legacyColor) ? legacyColor : 'tip'),
+        color: selectedColor,
     };
 };
 

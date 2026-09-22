@@ -73,7 +73,8 @@ blockquote.ccead-htmlblock--format-quote::after {
 .tiny-cceadhtmlblocks-picker {
     display: flex;
     flex-direction: column;
-    height: min(65vh, 42rem);
+    height: 65vh;
+    max-height: 42rem;
     min-height: 30rem;
 }
 
